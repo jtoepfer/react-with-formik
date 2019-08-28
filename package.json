@@ -1,7 +1,7 @@
 {
-  "name": "Formik mini-course",
+  "name": "formik-mini-course",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project was used to understand formik and how it fit into existing react applications.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
