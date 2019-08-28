@@ -12,19 +12,29 @@ class InquiryForm extends React.Component {
     // TODO: fetch data from microservice
     const { id } = ""; // parsed from query string
     if (id) {
-      contact = fetchContactById(id);
+      contact = this.fetchContactById(id);
     } else {
-      contact = createDefaultContact();
+      contact = this.createDefaultContact();
     }
-    // where to put this if with formik
+    // TODO: where to put this if with formik
   }
 
   fetchContactById(id) {}
 
-  createDefaultContact() {}
+  createDefaultContact() {
+    return {
+      influencer: {
+        firstName: ""
+      },
+      prospect: {
+        firstName: ""
+      }
+    };
+  }
 
   render() {
     const props = this.props;
+    const { onSubmit } = this.props;
     return (
       <form onSubmit={onSubmit}>
         <ScrollableLayoutManager {...props} />
