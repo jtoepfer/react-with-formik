@@ -17,16 +17,24 @@ class InquiryForm extends React.Component {
       contact = this.createDefaultContact();
     }
     // TODO: where to put this if with formik
+    this.setState({
+      contact: contact
+    });
   }
 
-  fetchContactById(id) {}
+  fetchContactById(id) {
+    return {
+      playerOne: {},
+      playerTwo: {}
+    };
+  }
 
   createDefaultContact() {
     return {
-      influencer: {
+      playerOne: {
         firstName: ""
       },
-      prospect: {
+      playerTwo: {
         firstName: ""
       }
     };
